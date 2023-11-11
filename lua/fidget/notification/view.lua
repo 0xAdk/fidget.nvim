@@ -147,6 +147,9 @@ function M.render(now, groups)
     end
   end
 
+  lines = vim.iter(lines):rev():totable();
+  highlights = vim.iter(highlights):rev():totable()
+
   return {
     width = width,
     lines = lines,
